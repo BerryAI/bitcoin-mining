@@ -46,7 +46,7 @@ NOTE: this step should not be required. There is already a script setup to run a
 
 ### To deploy to 21.co Machine (If the process is killed, need to do this)
 
-ssh to 21.co Machine (`twenty@192.168.0.103` @ office network)(DHCP)
+`ssh` to 21.co Machine (`twenty@192.168.0.103` @ office network)(DHCP)
 
 Go to music_server directory
 `cd ~/music_server`
@@ -60,3 +60,9 @@ Execute script, start server, run in background
 Deploy with Google App Engine Launcher, or follow the steps here: https://cloud.google.com/appengine/docs/python/gettingstartedpython27/uploading
 
 You must have permission to update the app to deploy to Google App Engine.
+
+
+## Check the request log
+
+Google App Engine acts as the middle man handling the requests sent from 21.co computer to API service providers.
+Visit https://appengine.google.com/logs?app_id=s~aivvy-bitcoin-backend to view the traffic between these servers.
