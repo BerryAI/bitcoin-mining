@@ -1,0 +1,17 @@
+info:
+  title: 'Music Search Service'
+  description: 'Query Music data from our music catalog'
+  x-21-quick-buy: '21 buy url "http://10.244.202.25:6001/tracks?&artist=Alicia+Bridges&title=I+Love+The+Nightlife"'
+  x-21-category: utilities
+  x-21-app-image: "https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519586-083_Music-128.png"
+  x-21-total-price:
+    min: 3000
+    max: 5000
+  contact:
+    name: Berry Lab
+    email: wl@berry.ai
+host: 10.244.202.25:6001
+schemes:
+  - http
+basePath: /
+x-21-manifest-path: /manifest

@@ -1,0 +1,223 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Are you a Music Lover?
+  description: Find your favorite music data with a given track title and artist name
+  version: "0.0.1"
+  x-21-usage: 'Find your favorite music data with a given track title and artist name'
+  x-21-category: utilities
+  x-21-total-price:
+    min: 3000
+    max: 100000
+  contact:
+    name: Berry Labs
+    email: wl@berry.ai
+  x-21-keywords:
+    - Music
+    - Metadata
+
+  x-21-quick-buy: "Use exact track title and artist name to search.\n \
+\ \n$ 21 buy url 'http://10.244.202.25:6001/tracks?&artist=Alicia+Bridges&title=I+Love+The+Nightlife'\
+\ \n\n[\
+\ \n   {\
+\ \n      \"title\":\"I Love the Nightlife\",\
+\ \n      \"artists\":[\
+\ \n         \"Alicia Bridges\"\
+\ \n      ],\
+\ \n      \"releases\":[\
+\ \n         {\
+\ \n            \"title\":\"Rewinds\",\
+\ \n            \"artist\":\"Various Artists\",\
+\ \n            \"media\":[\
+\ \n               {\
+\ \n                  \"totalDiscs\":\"1\",\
+\ \n                  \"position\":\"1\",\
+\ \n                  \"tracks\":[\
+\ \n                     {\
+\ \n                        \"title\":\"The Best Disco in Town\",\
+\ \n                        \"number\":\"1\",\
+\ \n                        \"artists\":[\
+\ \n                           \"The Ritchie Family\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"I Love the Nightlife\",\
+\ \n                        \"number\":\"10\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Alicia Bridges\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Boogie Oogie Oogie\",\
+\ \n                        \"number\":\"11\",\
+\ \n                        \"artists\":[\
+\ \n                           \"A Taste of Honey\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Contact\",\
+\ \n                        \"number\":\"12\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Edwin Starr\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Dance (Disco Heat)\",\
+\ \n                        \"number\":\"13\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Sylvester\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Macho Man\",\
+\ \n                        \"number\":\"14\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Village People\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Heaven Must Have Sent You\",\
+\ \n                        \"number\":\"15\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Bonnie Pointer\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Knock on Wood\",\
+\ \n                        \"number\":\"16\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Amii Stewart\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"The Hustle\",\
+\ \n                        \"number\":\"17\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Van McCoy\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Upside Down\",\
+\ \n                        \"number\":\"18\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Diana Ross\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Bad Girls\",\
+\ \n                        \"number\":\"2\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Donna Summer\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Let's All Chant\",\
+\ \n                        \"number\":\"3\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Michael Zager Band\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Funkytown\",\
+\ \n                        \"number\":\"4\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Lipps, Inc.\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"I Love to Love\",\
+\ \n                        \"number\":\"5\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Tina Charles\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Fly Robin Fly\",\
+\ \n                        \"number\":\"6\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Silver Convention\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Got to Be Real\",\
+\ \n                        \"number\":\"7\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Cheryl Lynn\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"I Will Survive\",\
+\ \n                        \"number\":\"8\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Gloria Gaynor\"\
+\ \n                        ]\
+\ \n                     },\
+\ \n                     {\
+\ \n                        \"title\":\"Don't Leave Me This Way\",\
+\ \n                        \"number\":\"9\",\
+\ \n                        \"artists\":[\
+\ \n                           \"Thelma Houston\"\
+\ \n                        ]\
+\ \n                     }\
+\ \n                  ]\
+\ \n               }\
+\ \n            ],\
+\ \n            \"uris\":[\
+\ \n               \"http://musicbrainz.org/release/4fb52a66-8f17-44b2-b0dc-0fc583c90720\"\
+\ \n            ],\
+\ \n            \"position\":{\
+\ \n               \"medium\":\"1\",\
+\ \n               \"track\":\"10\"\
+\ \n            },\
+\ \n            \"types\":[\
+\ \n               \"Compilation\",\
+\ \n               \"Album\"\
+\ \n            ],\
+\ \n            \"score\":1.0\
+\ \n         }\
+\ \n      ],\
+\ \n      \"uris\":[\
+\ \n         \"http://musicbrainz.org/recording/2300719a-3e11-4a9b-87d4-0045c2246d36\"\
+\ \n      ],\
+\ \n      \"composers\":[\
+\ \n         \"Alicia Bridges\",\
+\ \n         \"Susan Hutcheson\"\
+\ \n      ]\
+\ \n   }\
+\ \n]"
+
+
+host: 10.244.202.25:6001
+
+x-21-manifest-path: /manifest
+
+# array of all schemes that your API supports
+schemes:
+  - https
+
+# will be prefixed to all paths
+basePath: /
+
+paths:
+  /tracks:
+    get:
+      summary:
+        Search track-associated data with track name and artist name
+      description:
+        The Tracks endpoint returns information about the *Track* and the related tracks data.
+      parameters:
+        - name: title
+          in: query
+          description: Title of the track
+          required: true
+          type: string
+        - name: artist
+          in: query
+          description: Artist name of the track.
+          required: true
+          type: string
+      tags:
+        - Music Search
+        - Recommendation
+
