@@ -40,6 +40,11 @@ REQUEST_API_BASE_HREF = "http://aivvy-bitcoin-backend.appspot.com/onemusicapi"
 
 
 
+@app.route('/free')
+def test():
+    return "hello world"
+
+
 
 @app.route('/tracks')
 @payment.required(3000)  # Charge a fixed fee per request
@@ -111,4 +116,4 @@ def manifest():
 
 # Initialize and run the server
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6001)  # MUSIC
+    app.run(host='0.0.0.0', port=6002)  # MUSIC

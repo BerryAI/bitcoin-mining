@@ -13,10 +13,11 @@ Source code of projects relating to 21.co bitcoin computer
 
 ### 21.co Machine
 - Python 3.4
+- `screen` is installed by  `sudo apt-get install screen`
 
 ### Google App Engine
 - Python 2.7
-- Google App Engine SDK
+- Google App Engine Python SDK
 
 
 ## Development
@@ -38,11 +39,24 @@ Optionally change the server port and admin port if there is any conflict to you
 
 NOTE: this step should not be required. There is already a script setup to run at system boot.
 
-`sudo vi /etc/init.d/start_server.sh`
 
-`sudo chmod 755 /etc/init.d/start_server.sh`
+```
+touch /etc/init.d/start_server.sh
+sudo chmod 755 /etc/init.d/start_server.sh
+```
 
-`python3 /home/twenty/music_server/bitcoin-music-api-server.py &`
+Inside `/etc/init.d/start_server.sh`, there is a script calling screen
+
+```bash
+#!/bin/bash
+/usr/bin/screen -S server /home/twenty/music_server/start-server.sh
+```
+
+Inside `~/music_server/start-server.sh`,
+```bash
+python3 /home/twenty/music_server/bitcoin-music-api-server.py &
+```
+
 
 ### To deploy to 21.co Machine (If the process is killed, need to do this)
 
@@ -65,4 +79,5 @@ You must have permission to update the app to deploy to Google App Engine.
 ## Check the request log
 
 Google App Engine acts as the middle man handling the requests sent from 21.co computer to API service providers.
+
 Visit https://appengine.google.com/logs?app_id=s~aivvy-bitcoin-backend to view the traffic between these servers.

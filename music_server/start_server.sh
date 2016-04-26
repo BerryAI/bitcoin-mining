@@ -1,0 +1,1 @@
+python3 /home/twenty/music_server/bitcoin-music-api-server.py &
